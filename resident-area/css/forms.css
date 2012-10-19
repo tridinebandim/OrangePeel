@@ -1,0 +1,29 @@
+label{
+	display:block;
+	font-weight:bold;
+	text-align:left;
+	width:200px;
+	float:left;
+}
+input{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:2px 0 20px 10px;
+	border:black 1px solid;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+textarea{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:2px 0 20px 10px;
+	border:black 1px solid;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}

@@ -1,0 +1,233 @@
+/* ------------------------------------------
+NOTIFICATION BOXES
+by PixusDesign (Mir Haziq)
+- http://codecanyon.net/user/PixusDesign
+
+VERSION: 1.01
+DATE CREATED: 28-06-2010 1642 GMT +05:30
+------------------------------------------ */
+
+
+/* ----------------------------------------------
+-- GLOBAL STYLES FOR ALL NOTIFICATIONS
+---------------------------------------------- */
+.notification {
+	/* GENERAL */
+	border: 1px solid;
+	border-bottom-width: 2px;
+	color: #4f4f4f;
+	display: block;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	font-size: 11px;
+	line-height: 19px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	position: relative;
+	
+	/* BOX SHADOWS */
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.15), 0px 0px 2px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.15), 0px 0px 2px rgba(0,0,0,0.05);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.15), 0px 0px 2px rgba(0,0,0,0.05); /* standards version last */
+	
+	/* BORDER RADIUS */
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px; /* standards version last */
+}
+
+.notification p {
+	/* GENERAL */
+	padding: 16px 16px 16px 42px;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.65);
+}
+
+.notification p strong {
+	/* GENERAL */
+	color: #303030;
+	font-weight: bold;
+}
+
+/* ----------------------------------------------
+-- SUCCESS NOTIFICATION
+---------------------------------------------- */
+.notification.success {
+	/* GENERAL */
+	background-color: #dde6ba;
+	border-color: #d0e289 #c6d881 #b8cb71;
+	
+	/* BACKGROUND GRADIENTS */
+	background: -moz-linear-gradient(top,
+		#fff,
+		#e6efc2 2%,
+		#d9e2b7
+	);
+	background: -webkit-gradient(linear, left top, left bottom,
+		from(#fff),
+		color-stop(0.02, #e6efc2),
+		to(#d9e2b7)
+	);
+	background: linear-gradient(top,
+		#fff,
+		#e6efc2 2%,
+		#d9e2b7
+	); /* standards version last */
+	
+	/* filter gradient for IE */
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(StartColorStr='#e6efc2',EndColorStr='#d9e2b7');
+}
+
+.notification.success p {
+	background: transparent url('tick.png') no-repeat scroll 14px 17px;
+}
+
+.notification.success p strong {
+	color: #417800;
+}
+
+/* ----------------------------------------------
+-- ERROR NOTIFICATION
+---------------------------------------------- */
+.notification.error {
+	/* GENERAL */
+	background-color: #f6dbd6;
+	border-color: #f7d5d6 #f1c8ca #f2b5b8;
+	
+	/* BACKGROUND GRADIENTS */
+	background: -moz-linear-gradient(top,
+		#fff,
+		#fbe2e3 2%,
+		#eeccce
+	);
+	background: -webkit-gradient(linear, left top, left bottom,
+		from(#fff),
+		color-stop(0.02, #fbe2e3),
+		to(#eeccce)
+	);
+	background: linear-gradient(top,
+		#fff,
+		#fbe2e3 2%,
+		#eeccce
+	); /* standards version last */
+	
+	/* filter gradient for IE */
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(StartColorStr='#fbe2e3',EndColorStr='#eeccce');
+}
+
+.notification.error p {
+	background: transparent url('cross.png') no-repeat scroll 14px 17px;
+}
+
+.notification.error p strong {
+	color: #d43c41;
+}
+
+/* ----------------------------------------------
+-- WARNING NOTIFICATION
+---------------------------------------------- */
+.notification.warning {
+	/* GENERAL */
+	background-color: #f9f9b4;
+	border-color: #f7dc72 #f4d96c #eace61;
+	
+	/* BACKGROUND GRADIENTS */
+	background: -moz-linear-gradient(top,
+		#fff,
+		#ffffb9 2%,
+		#f0efae
+	);
+	background: -webkit-gradient(linear, left top, left bottom,
+		from(#fff),
+		color-stop(0.02, #ffffb9),
+		to(#f0efae)
+	);
+	background: linear-gradient(top,
+		#fff,
+		#ffffb9 2%,
+		#f0efae
+	); /* standards version last */
+	
+	/* filter gradient for IE */
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffb9',EndColorStr='#f0efae');
+}
+
+.notification.warning p {
+	background: transparent url('exclamation.png') no-repeat scroll 14px 17px;
+}
+
+.notification.warning p strong {
+	color: #777909;
+}
+
+/* ----------------------------------------------
+-- TIP/INFO NOTIFICATION
+---------------------------------------------- */
+.notification.tip {
+	/* GENERAL */
+	background-color: #dceffa;
+	border-color: #b8e1fd #a6d4f4 #9ed1f5;
+	
+	/* BACKGROUND GRADIENTS */
+	background: -moz-linear-gradient(top,
+		#fff,
+		#e0f4ff 2%,
+		#d4e6f0
+	);
+	background: -webkit-gradient(linear, left top, left bottom,
+		from(#fff),
+		color-stop(0.02, #e0f4ff),
+		to(#d4e6f0)
+	);
+	background: linear-gradient(top,
+		#fff,
+		#e0f4ff 2%,
+		#d4e6f0
+	); /* standards version last */
+	
+	/* filter gradient for IE */
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(StartColorStr='#e0f4ff',EndColorStr='#d4e6f0');
+}
+
+.notification.tip p strong {
+	color: #0068a4;
+}
+
+.notification.tip p {
+	background: transparent url('tip.png') no-repeat scroll 14px 17px;
+}
+
+/* ----------------------------------------------
+-- NEUTRAL NOTIFICATION
+---------------------------------------------- */
+.notification.neutral {
+	/* GENERAL */
+	background-color: #f0f0f0;
+	border-color: #e4e4e4 #d9d9d9 #cbcbcb;
+	
+	/* BACKGROUND GRADIENTS */
+	background: -moz-linear-gradient(top,
+		#fff,
+		#f0f0f0 2%,
+		#e4e4e4
+	);
+	background: -webkit-gradient(linear, left top, left bottom,
+		from(#fff),
+		color-stop(0.02, #f0f0f0),
+		to(#e4e4e4)
+	);
+	background: linear-gradient(top,
+		#fff,
+		#f0f0f0 2%,
+		#e4e4e4
+	); /* standards version last */
+	
+	/* filter gradient for IE */
+	filter: PROGID:DXImageTransform.Microsoft.Gradient(StartColorStr='#f0f0f0',EndColorStr='#e4e4e4');
+}
+
+.notification.neutral p strong {
+	color: #303030;
+}
+
+.notification.neutral p {
+	background: transparent url('neutral.png') no-repeat scroll 14px 17px;
+}

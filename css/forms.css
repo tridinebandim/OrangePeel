@@ -1,0 +1,223 @@
+#stylized p, #stylized h1, #stylized h2, #stylized form, #stylized button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+/* ----------- My Form ----------- */
+.myform{
+width:360px;
+padding:14px;
+}
+.thanks {
+	margin-top: 30px;
+	width:360px;
+}
+#apply {
+	height: 390px;
+	float:left;
+}
+body {
+	overflow: auto;
+	background-color: #282828;
+	background-image:url(../images/background.png);
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	line-height: 14px;
+	margin: 0px;
+	padding:0px;
+}
+/* ----------- stylized ----------- */
+a {
+	color: #FF7E00;
+	text-decoration: none;
+}
+a:hover {
+	background: #FF7E00;
+	color: #FFFFFF;
+}
+#stylized{
+border:solid 2px #282828;
+background:#131313;
+float:left;
+}
+#stylized h1 {
+font-size:14px;
+font-weight:bold;
+margin-bottom:8px;
+float: left;
+color: #FF7E00;
+text-shadow: 1px 1px 1px #000000;
+filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+#stylized h1 b {
+	color: #FFFFFF;
+}
+#stylized h2 {
+font-size:12px;
+margin-right: 5px;
+margin-bottom:8px;
+color: #FFFFFF;
+float: right;
+text-shadow: 1px 1px 1px #000000;
+filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+#stylized h2 b {
+	color: #FF7E00;
+}
+#stylized p {
+font-size:11px;
+color:#666666;
+margin:0px 5px 20px 0px;
+border-bottom:solid 1px #FF7E00;
+padding-bottom:10px;
+float: left;
+}
+#stylized label{
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left;
+}
+#stylized .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+#stylized input{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+margin:2px 0 20px 10px;
+border:black 1px solid;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+#stylized textarea{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:200px;
+height:50px;
+margin:2px 0 20px 10px;
+border:black 1px solid;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+#stylized .error {
+background: #FE7272;
+}
+#stylized select{
+float:left;
+font-size:12px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+margin:2px 0 20px 10px;
+border:black 1px solid;
+}
+button {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+#stylized button{
+	padding: 1px 5px 2px 5px;
+	font-size: 11px;
+	margin: 3px 3px 0px 150px;
+	border: none;
+	background: #FFFFFF;
+	color: #131313;
+	float:left;
+	font-weight: bold;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+}
+#stylized button:hover {
+	background: green;
+	color: #FFFFFF;
+}
+.button {
+	padding: 1px 5px 3px 5px;
+	margin: 3px 3px 0px 0px;
+	border: none;
+	background: #FFFFFF;
+	color: #131313;
+	float:left;
+	font-weight: bold;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+}
+.button:hover {
+	background: #FF7E00;
+	color: #FFFFFF;
+}
+#close {
+	padding: 1px 5px 3px 5px;
+	margin: 3px 3px 0px 0px;
+	border: none;
+	background: #FFFFFF;
+	color: #131313;
+	float:right;
+	font-weight: bold;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+}
+#close:hover {
+	background: red;
+	color: #FFFFFF;
+}
+#thanks input, #thanks textarea {
+	background: #666666;
+}
+#thanks h1 {
+	color: green;
+}
+#sorry h1 {
+	color: red;
+}
+#loveBox #love {
+	margin-top: 40px;
+	font-size: 160px;
+	color: #FF7E00;
+	text-shadow: 1px 1px 1px #000000;
+	filter: dropshadow(color=#000000, offx=1, offy=1);
+	text-align: center;
+}
+#loveBox {
+	padding: 10px;
+	margin: 5px;
+	width: 200px;
+	height: 130px;
+	float: left;
+	background: #131313;
+}
+#loveBox b {
+	font-size: 16px;
+	color: #FF7E00;
+	font-weight: bold;
+	float: left;
+	width: 180px;
+	margin-bottom: 5px;
+}
+#loveBox #close {
+	margin-top: 50px;
+}

@@ -1,0 +1,125 @@
+body {
+	padding: 0px;
+	margin: 10px 0px 0px 0px;
+	width: 630px;
+	overflow-y: scroll;
+	overflow: -moz-scrollbars-vertical;
+	background: #282828;
+}
+h1 {
+	width: 240px;
+}
+h2 {
+	float: right;
+	color: #FF7E00;
+	font-size: 18px;
+	text-align: right;
+	margin-right: 15px;
+	margin-top: 15px;
+}
+h2 a {
+	text-decoration: none;
+	padding:1px 2px 3px 2px;
+	color: #FFFFFF;
+}
+h2 a:hover {
+	background: #FF7E00;
+	padding:1px 2px 3px 2px;
+	
+}
+#container {
+	margin: 57px 5px 1px 5px;
+	padding: 5px 0px 10px 10px;
+	background: #131313;
+	float: left;
+	width: 630px;
+	height: 100%;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+}
+#fixTop {
+	position:fixed;top:0;left:0;
+	background: #282828;
+	padding-top: 10px;
+}
+#fixTop #menu {
+	margin: 20px 5px 0px 5px;
+	padding: 10px 0px 0px 10px;
+	background: #131313;
+	width: 630px;
+	float: left;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;
+}
+.image {
+	float: left;
+	margin-right: 5px;
+	width: 98px;
+	height: 98px;
+	-webkit-border-top-right-radius: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-right-radius: 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+	border-bottom-left-radius: 7px;
+}
+.button {
+	padding: 1px 5px 3px 5px;
+	margin: 10px 3px 0px 0px;
+	border: none;
+	background: #FFFFFF;
+	color: #131313;
+	float:left;
+	font-weight: bold;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	cursor: pointer;
+}
+.button:hover {
+	background: #FF7E00;
+	color: #FFFFFF;
+}
+.djBox, #onNow  {
+	float: left;
+	width: 98px;
+	height: 98px;
+	padding: 10px;
+	background: #333333;
+	margin: 3px 3px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	cursor: pointer;
+}
+#onNow {
+	background: #FF7E00;
+}
+
+.djBox:hover {
+	background: #444444;
+}
+.name {
+	color: #FF7E00;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;
+}
+#onNow  .name {
+	color: #FFFFFF;
+}
+.name b {
+	color: #777777;
+	font-size: 12px;
+}
+#onNow .name b {
+	color: #333333;
+}

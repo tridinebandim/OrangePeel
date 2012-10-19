@@ -1,0 +1,636 @@
+// Mixins
+
+@font-size: 16px;
+@line-height: 1.5em;
+@vertical-rhythm: 24px; 
+
+@lightgrey: #f6f6f6;
+@black: #333;
+
+@red: #e84545;
+@redpastel: #e99e9d;
+
+@orange: #e88645;
+@orangepastel: #e9bc9d;
+
+@yellow: #e8c745;
+@yellowpastel: #e9db9d;
+
+@green: #b2d840;
+@greenpastel: #cce197;
+
+@blue: #3ba4c7;
+@bluepastel: #92c7da;
+
+@indigo: #533bc7;
+@indigopastel: #a092da;
+
+@violet: #d03e93;
+@violetpastel:#de95bd;
+ 
+// Mixins
+
+
+.border_radius(@radius:4px)
+{
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+
+.border_radius_right(@radius:4px) 
+{
+    -webkit-border-top-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-top-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+.border_radius_left(@radius:4px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+
+.border_radius_bottom(@radius:4px)
+{
+    -webkit-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+.border_radius_top(@radius:4px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+}
+
+.box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888)
+{
+    box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.inset_box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888)
+{
+    box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -moz-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+ 
+.text_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_color:#fff)
+{
+    text-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
+}
+
+.vertical_gradient(@from: #000, @to: #FFF) {
+	background: @from;
+    background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background: -webkit-linear-gradient(@from, @to);
+    background-image: -moz-linear-gradient(top, @from, @to);
+    background-image: -moz-gradient(top, @from, @to);
+}
+
+
+/* Button Styles
+Author: Ninety Degrees
+*/
+
+a.button, input.button {
+	font-size:1em !important;
+	text-decoration: none;
+	cursor: pointer;
+	display:inline-block;
+	position: relative;
+	font-weight: bold;
+	padding:.4em 1.25em;
+	color:@lightgrey - #aaa; 
+	.border_radius();
+	.text_shadow(0,1px,0,rgba(255,255,255,0.3)); 
+	
+	-webkit-box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.2),
+		inset 0 0 6px 0 rgba(255,255,255,0.3),
+		0 1px 2px rgba(0,0,0,0.4);
+	-moz-box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.2),
+		inset 0 0 6px 0 rgba(255,255,255,0.3),
+		0 1px 2px rgba(0,0,0,0.4);
+	box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.2),
+		inset 0 0 6px 0 rgba(255,255,255,0.3),
+		0 1px 2px rgba(0,0,0,0.4);
+	.vertical_gradient(@lightgrey, @lightgrey - #222);
+	border:1px solid @lightgrey - #555;
+}
+
+a.button:hover, input.button:hover {
+	.vertical_gradient(@lightgrey, @lightgrey - #0a0a0a);
+}
+
+a.button:active, input.button:active {
+	top:1px;
+	.vertical_gradient(@lightgrey - #0a0a0a, @lightgrey);
+	-webkit-box-shadow:
+		inset 0 0 3px 0 rgba(0,0,0,0.4),
+		0 1px 0 0 #fff;
+	-moz-box-shadow:
+		inset 0 0 3px 0 rgba(0,0,0,0.4),
+		0 1px 0 0 #fff;
+	box-shadow:
+		inset 0 0 3px 0 rgba(0,0,0,0.4),
+		0 1px 0 0 #fff;
+}
+
+/* Larger buttons */
+
+a.button.heavy {
+	font-size:1.285em !important;
+	padding:.75em 1.5em;
+}
+
+/* Smaller buttons */
+
+a.button.light {
+	font-size:0.857em !important;
+	padding:.3em .75em;
+}
+
+/* Totally rounded buttons */
+
+a.button.lozenge {
+	.border_radius(2em);
+}
+
+/* Scale on hover */
+
+a.button.scale {
+	-webkit-transition:padding ease-in-out .2s;
+}
+
+a.button.scale:hover {
+	padding-top:.75em;
+	padding-bottom:.75em;
+}
+
+/* Chunky buttons */
+
+a.button.chunky {
+	border-bottom-width:3px !important;
+	position: relative;
+	-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+	-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+	box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+a.button.chunky:active {
+	border-bottom-width:1px !important;
+	top:2px;
+	-webkit-box-shadow:
+		inset 0 0 3px rgba(0,0,0,0.4),
+		0 0 0 1px rgba(255,255,255,0.2);
+}
+
+/* Icon buttons */
+
+.button.icon {
+	span {
+		padding-right:24px;
+	}
+}
+
+.button.icon.forward {
+	span {
+		background: url(../images/icons/forward.png) right no-repeat;
+	}
+}
+
+.button.icon.back {
+	span {
+		background: url(../images/icons/back.png) left no-repeat;
+		padding-left:24px;
+		padding-right:0;
+	}
+}
+
+.button.icon.download {
+	span {
+		background: url(../images/icons/download.png) right no-repeat;
+	}
+}
+
+.button.icon.edit {
+	span {
+		background: url(../images/icons/edit.png) right no-repeat;
+	}
+}
+
+.button.icon.rss {
+	span {
+		background: url(../images/icons/rss.png) right no-repeat;
+	}
+}
+
+.button.icon.upload {
+	span {
+		background: url(../images/icons/upload.png) right no-repeat;
+	}
+}
+
+.button.icon.delete {
+	span {
+		background: url(../images/icons/delete.png) right no-repeat;
+	}
+}
+
+.button.icon.login {
+	span {
+		background: url(../images/icons/login.png) right no-repeat;
+	}
+}
+
+.button.icon.love {
+	span {
+		background: url(../images/icons/love.png) right no-repeat;
+	}
+}
+
+.button.icon.tag {
+	span {
+		background: url(../images/icons/tag.png) right no-repeat;
+	}
+}
+
+.button.icon.refresh {
+	span {
+		background: url(../images/icons/refresh.png) right no-repeat;
+	}
+}
+
+.button.icon.lock {
+	span {
+		background: url(../images/icons/lock.png) right no-repeat;
+	}
+}
+
+.button.icon.unlock {
+	span {
+		background: url(../images/icons/unlock.png) right no-repeat;
+	}
+}
+
+.button.icon.search {
+	span {
+		background: url(../images/icons/search.png) right no-repeat;
+	}
+}
+
+.button.icon.add {
+	span {
+		background: url(../images/icons/add.png) right no-repeat;
+	}
+}
+
+.button.icon.confirm {
+	span {
+		background: url(../images/icons/confirm.png) right no-repeat;
+	}
+}
+
+.button.icon.time {
+	span {
+		background: url(../images/icons/time.png) right no-repeat;
+	}
+}
+
+.button.icon.trash {
+	span {
+		background: url(../images/icons/trash.png) right no-repeat;
+	}
+}
+
+.button.icon.email {
+	span {
+		background: url(../images/icons/email.png) right no-repeat;
+	}
+}
+
+.button.icon.comment {
+	span {
+		background: url(../images/icons/comment.png) right no-repeat;
+	}
+}
+
+.button.icon.bookmark {
+	span {
+		background: url(../images/icons/bookmark.png) right no-repeat;
+	}
+}
+
+.button.icon.top {
+	span {
+		background: url(../images/icons/top.png) right no-repeat;
+	}
+}
+
+/* Black button */
+
+a.button.black {
+	.vertical_gradient(@black, @black - #222);
+	color:@black + #aaa;
+	border:1px solid @black - #222;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.9));
+	-webkit-box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+		inset 0 0 6px 0 rgba(255,255,255,0.2),
+		0 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+		inset 0 0 6px 0 rgba(255,255,255,0.2),
+		0 1px 2px rgba(0,0,0,0.2);
+	box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+		inset 0 0 6px 0 rgba(255,255,255,0.2),
+		0 1px 2px rgba(0,0,0,0.2);
+}
+
+a.button.black:hover {
+	.vertical_gradient(@black, @black - #0a0a0a);	
+}
+
+a.button.black:active {
+	.vertical_gradient(@black - #0a0a0a, @black);
+	-webkit-box-shadow:
+		inset 0 0 3px 0 rgba(0,0,0,0.4),
+		0 1px 0 0 #fff;
+	-moz-box-shadow:
+		inset 0 0 3px 0 rgba(0,0,0,0.4),
+		0 1px 0 0 #fff;
+	box-shadow:
+		inset 0 0 3px 0 rgba(0,0,0,0.4),
+		0 1px 0 0 #fff;
+}
+
+/* Red button */
+
+a.button.red {
+	.vertical_gradient(@red, @red - #222);
+	color:@red + #aaa;
+	border:1px solid @red - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.red:hover {
+	.vertical_gradient(@red, @red - #0a0a0a);	
+}
+
+a.button.red:active {
+	.vertical_gradient(@red - #0a0a0a, @red);
+}
+
+/* Red Pastel button */
+
+a.button.red-pastel {
+	.vertical_gradient(@redpastel, @redpastel - #222);
+	color:@redpastel - #aaa;
+	border:1px solid @redpastel - #555;
+}
+
+a.button.red-pastel:hover {
+	.vertical_gradient(@redpastel, @redpastel - #0a0a0a);	
+}
+
+a.button.red-pastel:active {
+	.vertical_gradient(@redpastel - #0a0a0a, @redpastel);
+}
+
+/* Orange button */
+
+a.button.orange {
+	.vertical_gradient(@orange, @orange - #222);
+	color:@orange + #aaa;
+	border:1px solid @orange - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.orange:hover {
+	.vertical_gradient(@orange, @orange - #0a0a0a);	
+}
+
+a.button.orange:active {
+	.vertical_gradient(@orange - #0a0a0a, @orange);
+}
+
+/* Orange Pastel button */
+
+a.button.orange-pastel {
+	.vertical_gradient(@orangepastel, @orangepastel - #222);
+	color:@orangepastel - #aaa;
+	border:1px solid @orangepastel - #555;
+	.text_shadow(0,1px,0,rgba(255,255,255,0.2));
+}
+
+a.button.orange-pastel:hover {
+	.vertical_gradient(@orangepastel, @orangepastel - #0a0a0a);	
+}
+
+a.button.orange-pastel:active {
+	.vertical_gradient(@orangepastel - #0a0a0a, @orangepastel);
+}
+
+/* Yellow button */
+
+a.button.yellow {
+	.vertical_gradient(@yellow, @yellow - #222);
+	color:@yellow + #aaa;
+	border:1px solid @yellow - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.yellow:hover {
+	.vertical_gradient(@yellow, @yellow - #0a0a0a);	
+}
+
+a.button.yellow:active {
+	.vertical_gradient(@yellow - #0a0a0a, @yellow);
+}
+
+/* Yellow Pastel button */
+
+a.button.yellow-pastel {
+	.vertical_gradient(@yellowpastel, @yellowpastel - #222);
+	color:@yellowpastel - #aaa;
+	border:1px solid @yellowpastel - #555;
+	.text_shadow(0,1px,0,rgba(255,255,255,0.2));
+}
+
+a.button.yellow-pastel:hover {
+	.vertical_gradient(@yellowpastel, @yellowpastel - #0a0a0a);	
+}
+
+a.button.yellow-pastel:active {
+	.vertical_gradient(@yellowpastel - #0a0a0a, @yellowpastel);
+}
+
+/* Green button */
+
+a.button.green {
+	.vertical_gradient(@green, @green - #222);
+	color:@green + #aaa;
+	border:1px solid @green - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.green:hover {
+	.vertical_gradient(@green, @green - #0a0a0a);	
+}
+
+a.button.green:active {
+	.vertical_gradient(@green - #0a0a0a, @green);
+}
+
+/* Green Pastel button */
+
+a.button.green-pastel {
+	.vertical_gradient(@greenpastel, @greenpastel - #222);
+	color:@greenpastel - #aaa;
+	border:1px solid @greenpastel - #555;
+	.text_shadow(0,1px,0,rgba(255,255,255,0.2));
+}
+
+a.button.green-pastel:hover {
+	.vertical_gradient(@greenpastel, @greenpastel - #0a0a0a);	
+}
+
+a.button.green-pastel:active {
+	.vertical_gradient(@greenpastel - #0a0a0a, @greenpastel);
+}
+
+/* Blue button */
+
+a.button.blue {
+	.vertical_gradient(@blue, @blue - #222);
+	color:@blue + #aaa;
+	border:1px solid @blue - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.blue:hover {
+	.vertical_gradient(@blue, @blue - #0a0a0a);	
+}
+
+a.button.blue:active {
+	.vertical_gradient(@blue - #0a0a0a, @blue);
+}
+
+/* Blue Pastel button */
+
+a.button.blue-pastel {
+	.vertical_gradient(@bluepastel, @bluepastel - #222);
+	color:@bluepastel - #aaa;
+	border:1px solid @bluepastel - #555;
+	.text_shadow(0,1px,0,rgba(255,255,255,0.2));
+}
+
+a.button.blue-pastel:hover {
+	.vertical_gradient(@bluepastel, @bluepastel - #0a0a0a);	
+}
+
+a.button.blue-pastel:active {
+	.vertical_gradient(@bluepastel - #0a0a0a, @bluepastel);
+}
+
+/* Indigo button */
+
+a.button.indigo {
+	.vertical_gradient(@indigo, @indigo - #222);
+	color:@indigo + #aaa;
+	border:1px solid @indigo - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.indigo:hover {
+	.vertical_gradient(@indigo, @indigo - #0a0a0a);	
+}
+
+a.button.indigo:active {
+	.vertical_gradient(@indigo - #0a0a0a, @indigo);
+}
+
+/* Indigo pastel button */
+
+a.button.indigo-pastel {
+	.vertical_gradient(@indigopastel, @indigopastel - #222);
+	color:@indigopastel - #aaa;
+	border:1px solid @indigopastel - #555;
+	.text_shadow(0,1px,0,rgba(255,255,255,0.2));
+}
+
+a.button.indigo-pastel:hover {
+	.vertical_gradient(@indigopastel, @indigopastel - #0a0a0a);	
+}
+
+a.button.indigo-pastel:active {
+	.vertical_gradient(@indigopastel - #0a0a0a, @indigopastel);
+}
+
+/* Violet button */
+
+a.button.violet {
+	.vertical_gradient(@violet, @violet - #222);
+	color:@violet + #aaa;
+	border:1px solid @violet - #555;
+	.text_shadow(0,1px,0,rgba(0,0,0,0.2));
+}
+
+a.button.violet:hover {
+	.vertical_gradient(@violet, @violet - #0a0a0a);	
+}
+
+a.button.violet:active {
+	.vertical_gradient(@violet - #0a0a0a, @violet);
+}
+
+/* Violet Pastel button */
+
+a.button.violet-pastel {
+	.vertical_gradient(@violetpastel, @violetpastel - #222);
+	color:@violetpastel - #aaa;
+	border:1px solid @violetpastel - #555;
+	.text_shadow(0,1px,0,rgba(255,255,255,0.2));
+}
+
+a.button.violet-pastel:hover {
+	.vertical_gradient(@violetpastel, @violetpastel - #0a0a0a);	
+}
+
+a.button.violet-pastel:active {
+	.vertical_gradient(@violetpastel - #0a0a0a, @violetpastel);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

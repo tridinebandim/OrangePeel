@@ -1,0 +1,33 @@
+/* IE FIX */
+h1 {
+	width: 100%;
+	float: left;
+}
+h2 {
+	width: 100%;
+	float: left;
+}
+.onTime {
+	width: 80px;
+	float: right;
+	margin-right: 5dapx;
+}
+#livefeed b {
+	float: left;
+}
+.showInfo {
+	width: 180px;
+}
+#container {
+	width: 630px;
+	float: left;
+	padding-right: 0px;
+	margin-right: 0px;
+	height: 100%;
+}
+#schedule {
+		width: 100%;
+}
+#showBox {
+	width: 580px;
+}
